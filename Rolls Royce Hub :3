@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 -- MAIN WINDOW: ROLLS ROYCE HUB
 local Window = Rayfield:CreateWindow({
-   Name = "Rolls Royce Hub | Azure Edition",
+   Name = "Rolls Royce Hub [☑️]",
    LoadingTitle = "Rolls Royce Hub",
    LoadingSubtitle = "Premium Experience",
    ConfigurationSaving = { Enabled = false },
