@@ -1,254 +1,229 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+bG9jYWwgUmF5ZmllbGQgPSBsb2Fkc3RyaW5nKGdhbWU6SHR0cEdldCgnaHR0cHM6Ly9zaXJpdXMubWVudS9yYXlmaWVsZCcpKSgp
 
--- MAIN WINDOW: ROLLS ROYCE HUB
-local Window = Rayfield:CreateWindow({
-   Name = "Rolls Royce Hub [☑️]",
-   LoadingTitle = "Rolls Royce Hub",
-   LoadingSubtitle = "Premium Experience",
-   ConfigurationSaving = { Enabled = false },
-   KeySystem = true, 
-   KeySettings = {
-      Title = "Security Verification",
-      Subtitle = "Restricted Access",
-      Note = "Follow @the.real.azurex for key", 
-      FileName = "RollsRoyceKey", 
-      SaveKey = true,
-      GrabKeyFromSite = false,
-      Key = {"yousohandsome"} 
-   }
-})
+LS0gTUFJTiBXSU5ET1c6IFJPTExTIFJPWUNFIEhVQg
+bG9jYWwgV2luZG93ID0gUmF5ZmllbGQ6Q3JlYXRlV2luZG93KHs
+ICAgTmFtZSA9ICJSb2xscyBSb3ljZSBIdWIgW-KYke-4j10iLA
+ICAgTG9hZGluZ1RpdGxlID0gIlJvbGxzIFJveWNlIEh1YiIs
+ICAgTG9hZGluZ1N1YnRpdGxlID0gIlByZW1pdW0gRXhwZXJpZW5jZSIs
+ICAgQ29uZmlndXJhdGlvblNhdmluZyA9IHsgRW5hYmxlZCA9IGZhbHNlIH0s
+ICAgS2V5U3lzdGVtID0gdHJ1ZSwg
+ICAgS2V5U2V0dGluZ3MgPSB7
+ICAgICAgVGl0bGUgPSAiU2VjdXJpdHkgVmVyaWZpY2F0aW9uIiw
+ICAgICAgU3VidGl0bGUgPSAiUmVzdHJpY3RlZCBBY2Nlc3MiLA
+ICAgICAgTm90ZSA9ICJGb2xsb3cgQHRoZS5yZWFsLmF6dXJleCBmb3Iga2V5Iiwg
+ICAgICAgRmlsZU5hbWUgPSAiUm9sbHNSb3ljZUtleSIsIA
+ICAgICAgU2F2ZUtleSA9IHRydWUs
+ICAgICAgR3JhYktleUZyb21TaXRlID0gZmFsc2Us
+ICAgICAgS2V5ID0geyJ5b3Vzb2hhbmRzb21lIn0g
+ICAgfQ
+fSk
 
--- TABS
-local MoveTab = Window:CreateTab("Movement", 4483362458) 
-local MapTab = Window:CreateTab("Model Map", 4483362458)
-local CreditTab = Window:CreateTab("Credits", 4483362458)
+LS0gVEFCUw
+bG9jYWwgTW92ZVRhYiA9IFdpbmRvdzpDcmVhdGVUYWIoIk1vdmVtZW50IiwgNDQ4MzM2MjQ1OCkg
+bG9jYWwgTWFwVGFiID0gV2luZG93OkNyZWF0ZVRhYigiTW9kZWwgTWFwIiwgNDQ4MzM2MjQ1OCk
+bG9jYWwgQ3JlZGl0VGFiID0gV2luZG93OkNyZWF0ZVRhYigiQ3JlZGl0cyIsIDQ0ODMzNjI0NTgp
 
-local Settings = {
-    FOV = 90,
-    BhopEnabled = false,
-    BounceEnabled = false,
-    BounceAmount = 80,
-    ModelId = "",
-    AutoAnchor = true,
-    SpawnHeight = 50,
-    ModelScale = 1
-}
-local SpawnedModels = {}
+bG9jYWwgU2V0dGluZ3MgPSB7
+ICAgIEZPViA9IDkwLA
+ICAgIEJob3BFbmFibGVkID0gZmFsc2Us
+ICAgIEJvdW5jZUVuYWJsZWQgPSBmYWxzZSw
+ICAgIEJvdW5jZUFtb3VudCA9IDgwLA
+ICAgIE1vZGVsSWQgPSAiIiw
+ICAgIEF1dG9BbmNob3IgPSB0cnVlLA
+ICAgIFNwYXduSGVpZ2h0ID0gNTAs
+ICAgIE1vZGVsU2NhbGUgPSAx
+fQ
+bG9jYWwgU3Bhd25lZE1vZGVscyA9IHt9
 
----------------------------------------------------------------------
--- TAB: MOVEMENT
----------------------------------------------------------------------
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0gVEFCOiBNT1ZFTUVOVA
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
 
-MoveTab:CreateSection("Visuals")
+TW92ZVRhYjpDcmVhdGVTZWN0aW9uKCJWaXN1YWxzIik
 
-MoveTab:CreateSlider({
-   Name = "Field of View (FOV)",
-   Range = {70, 120},
-   Increment = 1,
-   CurrentValue = 90,
-   Callback = function(Value) Settings.FOV = Value end,
-})
+TW92ZVRhYjpDcmVhdGVTbGlkZXIoew
+ICAgTmFtZSA9ICJGaWVsZCBvZiBWaWV3IChGT1YpIiw
+ICAgUmFuZ2UgPSB7NzAsIDEyMH0s
+ICAgSW5jcmVtZW50ID0gMSw
+ICAgQ3VycmVudFZhbHVlID0gOTAs
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbihWYWx1ZSkgU2V0dGluZ3MuRk9WID0gVmFsdWUgZW5kLA
+fSk
 
-MoveTab:CreateSection("Automation & Physics")
+TW92ZVRhYjpDcmVhdGVTZWN0aW9uKCJBdXRvbWF0aW9uICYgUGh5c2ljcyIp
 
-MoveTab:CreateToggle({
-   Name = "Auto Bhop",
-   CurrentValue = false,
-   Callback = function(Value) Settings.BhopEnabled = Value end,
-})
+TW92ZVRhYjpDcmVhdGVUb2dnbGUoew
+ICAgTmFtZSA9ICJBdXRvIEJob3AiLA
+ICAgQ3VycmVudFZhbHVlID0gZmFsc2Us
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbihWYWx1ZSkgU2V0dGluZ3MuQmhvcEVuYWJsZWQgPSBWYWx1ZSBlbmQs
+fSk
 
-MoveTab:CreateButton({
-   Name = "⚡ Activate Edge Trimp Script",
-   Callback = function()
-      local Players = game:GetService("Players")
-      local RunService = game:GetService("RunService")
-      local StarterGui = game:GetService("StarterGui")
-      local UserInputService = game:GetService("UserInputService")
+TW92ZVRhYjpDcmVhdGVCdXR0b24oew
+ICAgTmFtZSA9ICLimqEgQWN0aXZhdGUgRWRnZSBUcmltcCBTY3JpcHQiLA
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbigp
+ICAgICAgbG9jYWwgUGxheWVycyA9IGdhbWU6R2V0U2VydmljZSgiUGxheWVycyIp
+ICAgICAgbG9jYWwgUnVuU2VydmljZSA9IGdhbWU6R2V0U2VydmljZSgiUnVuU2VydmljZSIp
+ICAgICAgbG9jYWwgU3RhcnRlckd1aSA9IGdhbWU6R2V0U2VydmljZSgiU3RhcnRlckd1aSIp
+ICAgICAgbG9jYWwgVXNlcklucHV0U2VydmljZSA9IGdhbWU6R2V0U2VydmljZSgiVXNlcklucHV0U2VydmljZSIp
 
-      local BOOST_POWER = 100
-      local MIN_Y_VELOCITY_TO_ACTIVATE = 1.0
-      local isEnabled = true
-      local player = Players.LocalPlayer
+ICAgICAgbG9jYWwgQk9PU1RfUE9XRVIgPSAxMDA
+ICAgICAgbG9jYWwgTUlOX1lfVkVMT0NJVFlfVE9fQUNUSVZBVEUgPSAxLjA
+ICAgICAgbG9jYWwgaXNFbmFibGVkID0gdHJ1ZQ
+ICAgICAgbG9jYWwgcGxheWVyID0gUGxheWVycy5Mb2NhbFBsYXllcg
 
-      local function getCharacterAndHrp()
-          local character = player.Character or player.CharacterAdded:Wait()
-          return character, character:WaitForChild("HumanoidRootPart"), character:WaitForChild("Humanoid")
-      end
+ICAgICAgbG9jYWwgZnVuY3Rpb24gZ2V0Q2hhcmFjdGVyQW5kSHJwKCk
+ICAgICAgICAgIGxvY2FsIGNoYXJhY3RlciA9IHBsYXllci5DaGFyYWN0ZXIgb3IgcGxheWVyLkNoYXJhY3RlckFkZGVkOldhaXQoKQ
+ICAgICAgICAgIHJldHVybiBjaGFyYWN0ZXIsIGNoYXJhY3RlcjpXYWl0Rm9yQ2hpbGQoIkh1bWFub2lkUm9vdFBhcnQiKSwgY2hhcmFjdGVyOldhaXRGb3JDaGlsZCgiSHVtYW5vaWQiKQ
+ICAgICAgZW5k
 
-      local character, hrp, humanoid = getCharacterAndHrp()
-      local UP_VELOCITY = Vector3.new(0, BOOST_POWER, 0)
+ICAgICAgbG9jYWwgY2hhcmFjdGVyLCBocnAsIGh1bWFub2lkID0gZ2V0Q2hhcmFjdGVyQW5kSHJwKCk
+ICAgICAgbG9jYWwgVVBfVkVMT0NJVFkgPSBWZWN0b3IzLm5ldygwLCBCT09TVF9QT1dFUiwgMCk
 
-      local function applyEdgeBoost()
-          if not isEnabled or not hrp or not humanoid or humanoid.Health <= 0 then return end
-          if hrp.AssemblyLinearVelocity.Y < -MIN_Y_VELOCITY_TO_ACTIVATE then
-              local touchingParts = hrp:GetTouchingParts()
-              if #touchingParts > 0 then
-                  local currentHorizontalVelocity = Vector3.new(hrp.AssemblyLinearVelocity.X, 0, hrp.AssemblyLinearVelocity.Z)
-                  hrp.AssemblyLinearVelocity = currentHorizontalVelocity + UP_VELOCITY
-              end
-          end
-      end
+ICAgICAgbG9jYWwgZnVuY3Rpb24gYXBwbHlFZGdlQm9vc3QoKQ
+ICAgICAgICAgIGlmIG5vdCBpc0VuYWJsZWQgb3Igbm90IGhycCBvciBub3QgaHVtYW5vaWQgb3IgaHVtYW5vaWQuSGVhbHRoIDw9IDAgdGhlbiByZXR1cm4gZW5k
+ICAgICAgICAgIGlmIGhycC5Bc3NlbWJseUxpbmVhclZlbG9jaXR5LlkgPCAtTUlOX1lfVkVMT0NJVFlfVE9fQUNUSVZBVEUgdGhlbg
+ICAgICAgICAgICAgICBsb2NhbCB0b3VjaGluZ1BhcnRzID0gaHJwOkdldFRvdWNoaW5nUGFydHMoKQ
+ICAgICAgICAgICAgICBpZiAjdG91Y2hpbmdQYXJ0cyA-IDAgdGhlbg
+ICAgICAgICAgICAgICAgICAgbG9jYWwgY3VycmVudEhvcml6b250YWxWZWxvY2l0eSA9IFZlY3RvcjMubmV3KGhycC5Bc3NlbWJseUxpbmVhclZlbG9jaXR5LlgsIDAsIGhycC5Bc3NlbWJseUxpbmVhclZlbG9jaXR5Llop
+ICAgICAgICAgICAgICAgICAgaHJwLkFzc2VtYmx5TGluZWFyVmVsb2NpdHkgPSBjdXJyZW50SG9yaXpvbnRhbFZlbG9jaXR5ICsgVVBfVkVMT0NJVFk
+ICAgICAgICAgICAgICBlbmQ
+ICAgICAgICAgIGVuZA
+ICAgICAgZW5k
 
-      RunService.Stepped:Connect(applyEdgeBoost)
-      
-      UserInputService.InputBegan:Connect(function(input, gp)
-          if not gp and input.KeyCode == Enum.KeyCode.U then
-              isEnabled = not isEnabled
-              StarterGui:SetCore("SendNotification", {
-                  Title = "Edge Trimp", 
-                  Text = isEnabled and "Enabled ✅" or "Disabled ❌", 
-                  Duration = 2
-              })
-          end
-      end)
+ICAgICAgUnVuU2VydmljZS5TdGVwcGVkOkNvbm5lY3QoYXBwbHlFZGdlQm9vc3Qp
+ICAgICAg
+ICAgICAgVXNlcklucHV0U2VydmljZS5JbnB1dEJlZ2FuOkNvbm5lY3QoZnVuY3Rpb24oaW5wdXQsIGdwKQ
+ICAgICAgICAgIGlmIG5vdCBncCBhbmQgaW5wdXQuS2V5Q29kZSA9PSBFbnVtLktleUNvZGUuVSB0aGVu
+ICAgICAgICAgICAgICBpc0VuYWJsZWQgPSBub3QgaXNFbmFibGVk
+ICAgICAgICAgICAgICBTdGFydGVyR3VpOlNldENvcmUoIlNlbmROb3RpZmljYXRpb24iLCB7
+ICAgICAgICAgICAgICAgICAgVGl0bGUgPSAiRWRnZSBUcmltcCIsIA
+ICAgICAgICAgICAgICAgICAgVGV4dCA9IGlzRW5hYmxlZCBhbmQgIkVuYWJsZWQg4pyFIiBvciAiRGlzYWJsZWQg4p2MIiwg
+ICAgICAgICAgICAgICAgICAgRHVyYXRpb24gPSAy
+ICAgICAgICAgICAgICB9KQ
+ICAgICAgICAgIGVuZA
+ICAgICAgZW5kKQ
 
-      StarterGui:SetCore("SendNotification", {Title = "Edge Trimp", Text = "Active! Press U to Toggle.", Duration = 5})
-   end,
-})
+ICAgICAgU3RhcnRlckd1aTpTZXRDb3JlKCJTZW5kTm90aWZpY2F0aW9uIiwge1RpdGxlID0gIkVkZ2UgVHJpbXAiLCBUZXh0ID0gIkFjdGl2ZSEgUHJlc3MgVSB0byBUb2dnbGUuIiwgRHVyYXRpb24gPSA1fSk
+ICAgZW5kLA
+fSk
 
-MoveTab:CreateToggle({
-   Name = "Bouncing",
-   CurrentValue = false,
-   Callback = function(Value) Settings.BounceEnabled = Value end,
-})
+TW92ZVRhYjpDcmVhdGVUb2dnbGUoew
+ICAgTmFtZSA9ICJCb3VuY2luZyIs
+ICAgQ3VycmVudFZhbHVlID0gZmFsc2Us
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbihWYWx1ZSkgU2V0dGluZ3MuQm91bmNlRW5hYmxlZCA9IFZhbHVlIGVuZCw
+fSk
 
-MoveTab:CreateSlider({
-   Name = "Bounce Amount",
-   Range = {0, 200},
-   Increment = 5,
-   CurrentValue = 80,
-   Callback = function(Value) Settings.BounceAmount = Value end,
-})
+TW92ZVRhYjpDcmVhdGVTbGlkZXIoew
+ICAgTmFtZSA9ICJCb3VuY2UgQW1vdW50Iiw
+ICAgUmFuZ2UgPSB7MCwgMjAwfSw
+ICAgSW5jcmVtZW50ID0gNSw
+ICAgQ3VycmVudFZhbHVlID0gODAs
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbihWYWx1ZSkgU2V0dGluZ3MuQm91bmNlQW1vdW50ID0gVmFsdWUgZW5kLA
+fSk
 
----------------------------------------------------------------------
--- TAB: MODEL MAP (WITH REMOVE INVIS WALL)
----------------------------------------------------------------------
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0gVEFCOiBNT0RFTCBNQVAgKFdJVEggUkVNT1ZFIElOVklTIFdBTEwp
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
 
-MapTab:CreateSection("AzureX Special Utilities")
+TWFwVGFiOkNyZWF0ZVNlY3Rpb24oIkF6dXJlWCBTcGVjaWFsIFV0aWxpdGllcyIp
 
-MapTab:CreateButton({
-   Name = "🛡️ Remove Invis Wall",
-   Callback = function()
-      local Workspace = game:GetService("Workspace")
-      local count = 0
-      for _, obj in pairs(Workspace:GetDescendants()) do
-          if (obj:IsA("BasePart") or obj:IsA("MeshPart")) and obj.Transparency >= 0.8 and obj.Position.Y > 50 then
-              pcall(function() obj:Destroy() end)
-              count = count + 1
-          end
-      end
-      Rayfield:Notify({Title = "AzureX", Content = "Successfully removed " .. count .. " invis walls!", Duration = 3})
-   end,
-})
+TWFwVGFiOkNyZWF0ZUJ1dHRvbih7
+ICAgTmFtZSA9ICLwn5uh77iPIFJlbW92ZSBJbnZpcyBXYWxsIiw
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbigp
+ICAgICAgbG9jYWwgV29ya3NwYWNlID0gZ2FtZTpHZXRTZXJ2aWNlKCJXb3Jrc3BhY2UiKQ
+ICAgICAgbG9jYWwgY291bnQgPSAw
+ICAgICAgZm9yIF8sIG9iaiBpbiBwYWlycyhXb3Jrc3BhY2U6R2V0RGVzY2VuZGFudHMoKSkgZG8
+ICAgICAgICAgIGlmIChvYmo6SXNBKCJCYXNlUGFydCIpIG9yIG9iajpJc0EoIk1lc2hQYXJ0IikpIGFuZCBvYmouVHJhbnNwYXJlbmN5ID49IDAuOCBhbmQgb2JqLlBvc2l0aW9uLlkgPiA1MCB0aGVu
+ICAgICAgICAgICAgICBwY2FsbChmdW5jdGlvbigpIG9iajpEZXN0cm95KCkgZW5kKQ
+ICAgICAgICAgICAgICBjb3VudCA9IGNvdW50ICsgMQ
+ICAgICAgICAgIGVuZA
+ICAgICAgZW5k
+ICAgICAgUmF5ZmllbGQ6Tm90aWZ5KHtUaXRsZSA9ICJBenVyZVgiLCBDb250ZW50ID0gIlN1Y2Nlc3NmdWxseSByZW1vdmVkICIgLi4gY291bnQgLi4gIiBpbnZpcyB3YWxscyEiLCBEdXJhdGlvbiA9IDN9KQ
+ICAgZW5kLA
+fSk
 
-MapTab:CreateSection("Model Spawner & Customization")
+TWFwVGFiOkNyZWF0ZVNlY3Rpb24oIk1vZGVsIFNwYXduZXIgJiBDdXN0b21pemF0aW9uIik
 
-MapTab:CreateInput({
-   Name = "Asset ID",
-   PlaceholderText = "Enter Model ID...",
-   Callback = function(Text) Settings.ModelId = Text end,
-})
+TWFwVGFiOkNyZWF0ZUlucHV0KHs
+ICAgTmFtZSA9ICJBc3NldCBJRCIs
+ICAgUGxhY2Vob2xkZXJUZXh0ID0gIkVudGVyIE1vZGVsIElELi4uIiw
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbihUZXh0KSBTZXR0aW5ncy5Nb2RlbElkID0gVGV4dCBlbmQs
+fSk
 
-MapTab:CreateSlider({
-   Name = "Spawn Height (Y)",
-   Range = {0, 500},
-   Increment = 5,
-   CurrentValue = 50,
-   Callback = function(Value) Settings.SpawnHeight = Value end,
-})
+TWFwVGFiOkNyZWF0ZVNsaWRlcih7
+ICAgTmFtZSA9ICJTcGF3biBIZWlnaHQgKFkpIiw
+ICAgUmFuZ2UgPSB7MCwgNTAwfSw
+ICAgSW5jcmVtZW50ID0gNSw
+ICAgQ3VycmVudFZhbHVlID0gNTAs
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbihWYWx1ZSkgU2V0dGluZ3MuU3Bhd25IZWlnaHQgPSBWYWx1ZSBlbmQs
+fSk
 
-MapTab:CreateSlider({
-   Name = "Model Scale (Size)",
-   Range = {1, 20},
-   Increment = 1,
-   CurrentValue = 1,
-   Callback = function(Value) Settings.ModelScale = Value end,
-})
+TWFwVGFiOkNyZWF0ZVNsaWRlcih7
+ICAgTmFtZSA9ICJNb2RlbCBTY2FsZSAoU2l6ZSkiLA
+ICAgUmFuZ2UgPSB7MSwgMjB9LA
+ICAgSW5jcmVtZW50ID0gMSw
+ICAgQ3VycmVudFZhbHVlID0gMSw
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbihWYWx1ZSkgU2V0dGluZ3MuTW9kZWxTY2FsZSA9IFZhbHVlIGVuZCw
+fSk
 
-MapTab:CreateToggle({
-   Name = "Auto Anchor",
-   CurrentValue = true,
-   Callback = function(Value) Settings.AutoAnchor = Value end,
-})
+TWFwVGFiOkNyZWF0ZVRvZ2dsZSh7
+ICAgTmFtZSA9ICJBdXRvIEFuY2hvciIs
+ICAgQ3VycmVudFZhbHVlID0gdHJ1ZSw
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbihWYWx1ZSkgU2V0dGluZ3MuQXV0b0FuY2hvciA9IFZhbHVlIGVuZCw
+fSk
 
-MapTab:CreateButton({
-   Name = "🚀 Spawn Model",
-   Callback = function()
-      if Settings.ModelId ~= "" and tonumber(Settings.ModelId) then
-         local success, objects = pcall(function() return game:GetObjects("rbxassetid://" .. Settings.ModelId) end)
-         if success and objects then
-            local container = Instance.new("Model", workspace)
-            container.Name = "RR_Spawned_" .. Settings.ModelId
-            table.insert(SpawnedModels, container)
-            
-            for _, obj in pairs(objects) do
-               obj.Parent = container
-               if Settings.ModelScale > 1 then
-                   if obj:IsA("Model") then obj:ScaleTo(obj:GetScale() * Settings.ModelScale)
-                   elseif obj:IsA("BasePart") then obj.Size = obj.Size * Settings.ModelScale end
-               end
-               if Settings.AutoAnchor then
-                  for _, child in pairs(obj:GetDescendants()) do
-                     if child:IsA("BasePart") then child.Anchored = true end
-                  end
-               end
-            end
-            
-            local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-            container:MoveTo(hrp.Position + Vector3.new(0, Settings.SpawnHeight, 0))
-            Rayfield:Notify({Title = "Success", Content = "Model Spawned!", Duration = 2})
-         end
-      end
-   end,
-})
+TWFwVGFiOkNyZWF0ZUJ1dHRvbih7
+ICAgTmFtZSA9ICLwn5qAIFNwYXduIE1vZGVsIiw
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbigp
+ICAgICAgaWYgU2V0dGluZ3MuTW9kZWxJZCB-PSAiIiBhbmQgdG9udW1iZXIoU2V0dGluZ3MuTW9kZWxJZCkgdGhlbg
+ICAgICAgICAgbG9jYWwgc3VjY2Vzcywgb2JqZWN0cyA9IHBjYWxsKGZ1bmN0aW9uKCkgcmV0dXJuIGdhbWU6R2V0T2JqZWN0cygicmJ4YXNzZXRpZDovLyIgLi4gU2V0dGluZ3MuTW9kZWxJZCkgZW5kKQ
+ICAgICAgICAgaWYgc3VjY2VzcyBhbmQgb2JqZWN0cyB0aGVu
+ICAgICAgICAgICAgbG9jYWwgY29udGFpbmVyID0gSW5zdGFuY2UubmV3KCJNb2RlbCIsIHdvcmtzcGFjZSk
+ICAgICAgICAgICAgY29udGFpbmVyLk5hbWUgPSAiUlJfU3Bhd25lZF8iIC4uIFNldHRpbmdzLk1vZGVsSWQ
+ICAgICAgICAgICAgdGFibGUuaW5zZXJ0KFNwYXduZWRNb2RlbHMsIGNvbnRhaW5lcik
+ICAgICAgICAgICAg
+ICAgICAgICAgICAgZm9yIF8sIG9iaiBpbiBwYWlycyhvYmplY3RzKSBkbw
+ICAgICAgICAgICAgICAgb2JqLlBhcmVudCA9IGNvbnRhaW5lcg
+ICAgICAgICAgICAgICAgaWYgU2V0dGluZ3MuTW9kZWxTY2FsZSA-IDEgdGhlbg
+ICAgICAgICAgICAgICAgICAgIGlmIG9iajpJc0EoIk1vZGVsIikgdGhlbiBvYmo6U2NhbGVUbyhvYmo6R2V0U2NhbGUoKSAqIFNldHRpbmdzLk1vZGVsU2NhbGUp
+ICAgICAgICAgICAgICAgICAgIGVsc2VpZiBvYmo6SXNBKCJCYXNlUGFydCIpIHRoZW4gb2JqLlNpemUgPSBvYmouU2l6ZSAqIFNldHRpbmdzLk1vZGVsU2NhbGUgZW5k
+ICAgICAgICAgICAgICAgZW5k
+ICAgICAgICAgICAgICAgaWYgU2V0dGluZ3MuQXV0b0FuY2hvciB0aGVu
+ICAgICAgICAgICAgICAgICAgZm9yIF8sIGNoaWxkIGluIHBhaXJzKG9iajpHZXREZXNjZW5kYW50cygpKSBkbw
+ICAgICAgICAgICAgICAgICAgICAgaWYgY2hpbGQ6SXNBKCJCYXNlUGFydCIpIHRoZW4gY2hpbGQuQW5jaG9yZWQgPSB0cnVlIGVuZA
+ICAgICAgICAgICAgICAgICAgZW5k
+ICAgICAgICAgICAgICAgZW5k
+ICAgICAgICAgICAgZW5k
+ICAgICAgICAgICAg
+ICAgICAgICAgICAgbG9jYWwgaHJwID0gZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0
+ICAgICAgICAgICAgY29udGFpbmVyOk1vdmVUbyhocnAuUG9zaXRpb24gKyBWZWN0b3IzLm5ldygwLCBTZXR0aW5ncy5TcGF3bkhlaWdodCwgMCkp
+ICAgICAgICAgICAgUmF5ZmllbGQ6Tm90aWZ5KHtUaXRsZSA9ICJTdWNjZXNzIiwgQ29udGVudCA9ICJNb2RlbCBTcGF3bmVkISIsIER1cmF0aW9uID0gMn0p
+ICAgICAgICAgZW5k
+ICAgICAgZW5k
+ICAgZW5kLA
+fSk
 
-MapTab:CreateButton({
-   Name = "🗑️ Delete All Spawned Models",
-   Callback = function()
-      for _, model in pairs(SpawnedModels) do if model then model:Destroy() end end
-      SpawnedModels = {}
-      Rayfield:Notify({Title = "System", Content = "Cleaned up all spawned models.", Duration = 3})
-   end,
-})
+TWFwVGFiOkNyZWF0ZUJ1dHRvbih7
+ICAgTmFtZSA9ICLwn5eR77iPIERlbGV0ZSBBbGwgU3Bhd25lZCBNb2RlbHMiLA
+ICAgQ2FsbGJhY2sgPSBmdW5jdGlvbigp
+ICAgICAgZm9yIF8sIG1vZGVsIGluIHBhaXJzKFNwYXduZWRNb2RlbHMpIGRvIGlmIG1vZGVsIHRoZW4gbW9kZWw6RGVzdHJveSgpIGVuZCBlbmQ
+ICAgICAgU3Bhd25lZE1vZGVscyA9IHt9
+ICAgICAgUmF5ZmllbGQ6Tm90aWZ5KHtUaXRsZSA9ICJTeXN0ZW0iLCBDb250ZW50ID0gIkNsZWFuZWQgdXAgYWxsIHNwYXduZWQgbW9kZWxzLiIsIER1cmF0aW9uID0gM30p
+ICAgZW5kLA
+fSk
 
----------------------------------------------------------------------
--- CORE LOGIC
----------------------------------------------------------------------
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0gQ09SRSBMT0dJQw
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
 
-local RunService = game:GetService("RunService")
-local player = game.Players.LocalPlayer
+bG9jYWwgUnVuU2VydmljZSA9IGdhbWU6R2V0U2VydmljZSgiUnVuU2VydmljZSIp
+bG9jYWwgcGxheWVyID0gZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVy
 
-RunService.PreRender:Connect(function()
-    local char = player.Character
-    local hum = char and char:FindFirstChild("Humanoid")
-    local hrp = char and char:FindFirstChild("HumanoidRootPart")
+UnVuU2VydmljZS5QcmVSZW5kZXI6Q29ubmVjdChmdW5jdGlvbigp
+ICAgIGxvY2FsIGNoYXIgPSBwbGF5ZXIuQ2hhcmFjdGVy
+ICAgIGxvY2FsIGh1bSA9IGNoYXIgYW5kIGNoYXI6RmluZEZpcnN0Q2hpbGQoIkh1bWFub2lkIik
+ICAgIGxvY2FsIGhycCA9IGNoYXIgYW5kIGNoYXI6RmluZEZpcnN0Q2hpbGQoIkh1bWFub2lkUm9vdFBhcnQiKQ
 
-    if hum and hrp then
-        game.Workspace.CurrentCamera.FieldOfView = Settings.FOV
-        if Settings.BhopEnabled and hum.MoveDirection.Magnitude > 0 then
-            if hum.FloorMaterial ~= Enum.Material.Air then hum:ChangeState(Enum.HumanoidStateType.Jumping) end
-        end
-        if Settings.BounceEnabled and hrp.AssemblyLinearVelocity.Y < -5 then
-            local parts = hrp:GetTouchingParts()
-            if #parts > 0 then
-                hrp.AssemblyLinearVelocity = Vector3.new(hrp.AssemblyLinearVelocity.X, Settings.BounceAmount, hrp.AssemblyLinearVelocity.Z)
-            end
-        end
-    end
-end)
-
----------------------------------------------------------------------
--- CREDITS
----------------------------------------------------------------------
-
-CreditTab:CreateSection("Credits")
-CreditTab:CreateLabel("Credit by: AzureX")
-CreditTab:CreateLabel("Script Ideas: Milan Hub")
-CreditTab:CreateLabel("Follow me (TikTok): the.real.azurex")
-CreditTab:CreateLabel("Thx for use my script")
-
-Rayfield:Notify({Title = "Rolls Royce Hub", Content = "AzureX Utilities Restored!", Duration = 5})
-  W4
+ICAgIGlmIGh1bSBhbmQgaHJwIHRoZW4
 ICAgICAgICBnYW1lLldvcmtzcGFjZS5DdXJyZW50Q2FtZXJhLkZpZWxkT2ZWaWV3ID0gU2V0dGluZ3MuRk9W
 ICAgICAgICBpZiBTZXR0aW5ncy5CaG9wRW5hYmxlZCBhbmQgaHVtLk1vdmVEaXJlY3Rpb24uTWFnbml0dWRlID4gMCB0aGVu
 ICAgICAgICAgICAgaWYgaHVtLkZsb29yTWF0ZXJpYWwgfj0gRW51bS5NYXRlcmlhbC5BaXIgdGhlbiBodW06Q2hhbmdlU3RhdGUoRW51bS5IdW1hbm9pZFN0YXRlVHlwZS5KdW1waW5nKSBlbmQ
@@ -273,4 +248,5 @@ Q3JlZGl0VGFiOkNyZWF0ZUxhYmVsKCJGb2xsb3cgbWUgKFRpa1Rvayk6IHRoZS5yZWFsLmF6dXJleCIp
 Q3JlZGl0VGFiOkNyZWF0ZUxhYmVsKCJUaHggZm9yIHVzZSBteSBzY3JpcHQiKQ
 
 UmF5ZmllbGQ6Tm90aWZ5KHtUaXRsZSA9ICJSb2xscyBSb3ljZSBIdWIiLCBDb250ZW50ID0gIkF6dXJlWCBVdGlsaXRpZXMgUmVzdG9yZWQhIiwgRHVyYXRpb24gPSA1fSk
+ICAmVzdG9yZWQhIiwgRHVyYXRpb24gPSA1fSk
 ICA
