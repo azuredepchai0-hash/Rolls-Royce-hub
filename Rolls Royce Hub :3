@@ -1,0 +1,251 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- MAIN WINDOW: ROLLS ROYCE HUB
+local Window = Rayfield:CreateWindow({
+   Name = "Rolls Royce Hub | Azure Edition",
+   LoadingTitle = "Rolls Royce Hub",
+   LoadingSubtitle = "Premium Experience",
+   ConfigurationSaving = { Enabled = false },
+   KeySystem = true, 
+   KeySettings = {
+      Title = "Security Verification",
+      Subtitle = "Restricted Access",
+      Note = "Follow @the.real.azurex for key", 
+      FileName = "RollsRoyceKey", 
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {"yousohandsome"} 
+   }
+})
+
+-- TABS
+local MoveTab = Window:CreateTab("Movement", 4483362458) 
+local MapTab = Window:CreateTab("Model Map", 4483362458)
+local CreditTab = Window:CreateTab("Credits", 4483362458)
+
+local Settings = {
+    FOV = 90,
+    BhopEnabled = false,
+    BounceEnabled = false,
+    BounceAmount = 80,
+    ModelId = "",
+    AutoAnchor = true,
+    SpawnHeight = 50,
+    ModelScale = 1
+}
+local SpawnedModels = {}
+
+---------------------------------------------------------------------
+-- TAB: MOVEMENT
+---------------------------------------------------------------------
+
+MoveTab:CreateSection("Visuals")
+
+MoveTab:CreateSlider({
+   Name = "Field of View (FOV)",
+   Range = {70, 120},
+   Increment = 1,
+   CurrentValue = 90,
+   Callback = function(Value) Settings.FOV = Value end,
+})
+
+MoveTab:CreateSection("Automation & Physics")
+
+MoveTab:CreateToggle({
+   Name = "Auto Bhop",
+   CurrentValue = false,
+   Callback = function(Value) Settings.BhopEnabled = Value end,
+})
+
+MoveTab:CreateButton({
+   Name = "⚡ Activate Edge Trimp Script",
+   Callback = function()
+      local Players = game:GetService("Players")
+      local RunService = game:GetService("RunService")
+      local StarterGui = game:GetService("StarterGui")
+      local UserInputService = game:GetService("UserInputService")
+
+      local BOOST_POWER = 100
+      local MIN_Y_VELOCITY_TO_ACTIVATE = 1.0
+      local isEnabled = true
+      local player = Players.LocalPlayer
+
+      local function getCharacterAndHrp()
+          local character = player.Character or player.CharacterAdded:Wait()
+          return character, character:WaitForChild("HumanoidRootPart"), character:WaitForChild("Humanoid")
+      end
+
+      local character, hrp, humanoid = getCharacterAndHrp()
+      local UP_VELOCITY = Vector3.new(0, BOOST_POWER, 0)
+
+      local function applyEdgeBoost()
+          if not isEnabled or not hrp or not humanoid or humanoid.Health <= 0 then return end
+          if hrp.AssemblyLinearVelocity.Y < -MIN_Y_VELOCITY_TO_ACTIVATE then
+              local touchingParts = hrp:GetTouchingParts()
+              if #touchingParts > 0 then
+                  local currentHorizontalVelocity = Vector3.new(hrp.AssemblyLinearVelocity.X, 0, hrp.AssemblyLinearVelocity.Z)
+                  hrp.AssemblyLinearVelocity = currentHorizontalVelocity + UP_VELOCITY
+              end
+          end
+      end
+
+      RunService.Stepped:Connect(applyEdgeBoost)
+      
+      UserInputService.InputBegan:Connect(function(input, gp)
+          if not gp and input.KeyCode == Enum.KeyCode.U then
+              isEnabled = not isEnabled
+              StarterGui:SetCore("SendNotification", {
+                  Title = "Edge Trimp", 
+                  Text = isEnabled and "Enabled ✅" or "Disabled ❌", 
+                  Duration = 2
+              })
+          end
+      end)
+
+      StarterGui:SetCore("SendNotification", {Title = "Edge Trimp", Text = "Active! Press U to Toggle.", Duration = 5})
+   end,
+})
+
+MoveTab:CreateToggle({
+   Name = "Bouncing",
+   CurrentValue = false,
+   Callback = function(Value) Settings.BounceEnabled = Value end,
+})
+
+MoveTab:CreateSlider({
+   Name = "Bounce Amount",
+   Range = {0, 200},
+   Increment = 5,
+   CurrentValue = 80,
+   Callback = function(Value) Settings.BounceAmount = Value end,
+})
+
+---------------------------------------------------------------------
+-- TAB: MODEL MAP (WITH REMOVE INVIS WALL)
+---------------------------------------------------------------------
+
+MapTab:CreateSection("AzureX Special Utilities")
+
+MapTab:CreateButton({
+   Name = "🛡️ Remove Invis Wall",
+   Callback = function()
+      local Workspace = game:GetService("Workspace")
+      local count = 0
+      for _, obj in pairs(Workspace:GetDescendants()) do
+          if (obj:IsA("BasePart") or obj:IsA("MeshPart")) and obj.Transparency >= 0.8 and obj.Position.Y > 50 then
+              pcall(function() obj:Destroy() end)
+              count = count + 1
+          end
+      end
+      Rayfield:Notify({Title = "AzureX", Content = "Successfully removed " .. count .. " invis walls!", Duration = 3})
+   end,
+})
+
+MapTab:CreateSection("Model Spawner & Customization")
+
+MapTab:CreateInput({
+   Name = "Asset ID",
+   PlaceholderText = "Enter Model ID...",
+   Callback = function(Text) Settings.ModelId = Text end,
+})
+
+MapTab:CreateSlider({
+   Name = "Spawn Height (Y)",
+   Range = {0, 500},
+   Increment = 5,
+   CurrentValue = 50,
+   Callback = function(Value) Settings.SpawnHeight = Value end,
+})
+
+MapTab:CreateSlider({
+   Name = "Model Scale (Size)",
+   Range = {1, 20},
+   Increment = 1,
+   CurrentValue = 1,
+   Callback = function(Value) Settings.ModelScale = Value end,
+})
+
+MapTab:CreateToggle({
+   Name = "Auto Anchor",
+   CurrentValue = true,
+   Callback = function(Value) Settings.AutoAnchor = Value end,
+})
+
+MapTab:CreateButton({
+   Name = "🚀 Spawn Model",
+   Callback = function()
+      if Settings.ModelId ~= "" and tonumber(Settings.ModelId) then
+         local success, objects = pcall(function() return game:GetObjects("rbxassetid://" .. Settings.ModelId) end)
+         if success and objects then
+            local container = Instance.new("Model", workspace)
+            container.Name = "RR_Spawned_" .. Settings.ModelId
+            table.insert(SpawnedModels, container)
+            
+            for _, obj in pairs(objects) do
+               obj.Parent = container
+               if Settings.ModelScale > 1 then
+                   if obj:IsA("Model") then obj:ScaleTo(obj:GetScale() * Settings.ModelScale)
+                   elseif obj:IsA("BasePart") then obj.Size = obj.Size * Settings.ModelScale end
+               end
+               if Settings.AutoAnchor then
+                  for _, child in pairs(obj:GetDescendants()) do
+                     if child:IsA("BasePart") then child.Anchored = true end
+                  end
+               end
+            end
+            
+            local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+            container:MoveTo(hrp.Position + Vector3.new(0, Settings.SpawnHeight, 0))
+            Rayfield:Notify({Title = "Success", Content = "Model Spawned!", Duration = 2})
+         end
+      end
+   end,
+})
+
+MapTab:CreateButton({
+   Name = "🗑️ Delete All Spawned Models",
+   Callback = function()
+      for _, model in pairs(SpawnedModels) do if model then model:Destroy() end end
+      SpawnedModels = {}
+      Rayfield:Notify({Title = "System", Content = "Cleaned up all spawned models.", Duration = 3})
+   end,
+})
+
+---------------------------------------------------------------------
+-- CORE LOGIC
+---------------------------------------------------------------------
+
+local RunService = game:GetService("RunService")
+local player = game.Players.LocalPlayer
+
+RunService.PreRender:Connect(function()
+    local char = player.Character
+    local hum = char and char:FindFirstChild("Humanoid")
+    local hrp = char and char:FindFirstChild("HumanoidRootPart")
+
+    if hum and hrp then
+        game.Workspace.CurrentCamera.FieldOfView = Settings.FOV
+        if Settings.BhopEnabled and hum.MoveDirection.Magnitude > 0 then
+            if hum.FloorMaterial ~= Enum.Material.Air then hum:ChangeState(Enum.HumanoidStateType.Jumping) end
+        end
+        if Settings.BounceEnabled and hrp.AssemblyLinearVelocity.Y < -5 then
+            local parts = hrp:GetTouchingParts()
+            if #parts > 0 then
+                hrp.AssemblyLinearVelocity = Vector3.new(hrp.AssemblyLinearVelocity.X, Settings.BounceAmount, hrp.AssemblyLinearVelocity.Z)
+            end
+        end
+    end
+end)
+
+---------------------------------------------------------------------
+-- CREDITS
+---------------------------------------------------------------------
+
+CreditTab:CreateSection("Credits")
+CreditTab:CreateLabel("Credit by: AzureX")
+CreditTab:CreateLabel("Script Ideas: Milan Hub")
+CreditTab:CreateLabel("Follow me (TikTok): the.real.azurex")
+CreditTab:CreateLabel("Thx for use my script")
+
+Rayfield:Notify({Title = "Rolls Royce Hub", Content = "AzureX Utilities Restored!", Duration = 5})
+  
